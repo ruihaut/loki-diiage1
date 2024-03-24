@@ -72,15 +72,15 @@ Le binaire est maintenant installé et prêt à être utilisé. La prochaine ét
         idle_timeout: 12h
         labels:
           job: syslog
-        relabel_configs:
-          - source_labels: [__syslog_message_hostname]
-            target_label: host
-          - source_labels: [__syslog_message_severity]
-            target_label: severity
-          - source_labels: [__syslog_message_app_name]
-            target_label: application
-          - source_labels: [__syslog_message_facility]
-            target_label: facility
+      relabel_configs:
+        - source_labels: [__syslog_message_hostname]
+          target_label: host
+        - source_labels: [__syslog_message_severity]
+          target_label: severity
+        - source_labels: [__syslog_message_app_name]
+          target_label: application
+        - source_labels: [__syslog_message_facility]
+          target_label: facility
     ```
 
     > **Note**  
